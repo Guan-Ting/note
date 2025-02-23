@@ -29,3 +29,21 @@
         - withMisfireHamdlingInstructionFireAndProceed():默認值，錯過的全部合併成一次，並立即補償(即使任務終止時間已到達)，然後後續正常執行
         - with MisfireHandlingInstructionIgnoreMisfires():錯過的全部補償，然後後續正常執行
 - 持久化
+
+# QuartzJob
+
+## 接口
+
+- /healthcheck
+- /list 顯示所有排程
+- /pause 暫停
+- /pauseAll 暫停所有排程
+- /start 啟動
+- /resume 恢復排程
+- /resumeAll 恢復所有排程
+- /delete 刪除指定排程
+- /update 更新所有排程
+- /add 新增排程
+- /getAllJob
+- /uploadJob
+- /test 測試接口

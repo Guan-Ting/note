@@ -1,0 +1,22 @@
+@startuml
+
+interface BaseQuartzJob {
+    + run() : String throws Exception
+    + getJobName() : String throws Exception
+    + getQuartzName() : String throws Exception
+    + getTriggerName() : String throws Exception
+    + getCron() : String throws Exception
+    + getDescription() : String throws Exception
+    + test() : String
+}
+
+class QuartzJobBean {
+}
+
+abstract class BaseQuartzJobBean {
+}
+
+BaseQuartzJobBean --|> QuartzJobBean
+BaseQuartzJobBean ..> BaseQuartzJob : implements
+
+@enduml
