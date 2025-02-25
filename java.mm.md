@@ -4,8 +4,6 @@
 
 - localDateTime API
 
-## 接口
-
 - /healthcheck
 - /list 顯示所有排程
 - /pause 暫停
