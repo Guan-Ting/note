@@ -45,6 +45,33 @@
 ## 上稿管理
 
 - 優惠券管理
+  - Coupon
+  - CouponDispatch
+    - USERRECEIVECOUNTERROR(-5),每人獲得張數有誤
+    - NOTENOUGHPIECE(-4),剩餘折價券不夠發送
+    - NOCONDITION(-3),沒有條件，不支援群發
+    - DELETE(-2)
+    - FAILED(-1)
+    - RETRY(0)
+    - WAITING(1)
+    - TRANSPORTING(2)
+    - SENDED(3)
+  - CouponDispatchRecord
+    - UKNOWNERROR(-1),
+    - NOTUSE(0),
+    - USED(1),
+    - EXPIRED(2),
+    - COUPONEXPIRED(3), // 超過折價券停用或超過領取時間
+    - COUPONLIMIT(4), // 折價券數量不足
+    - COUPONUSERLIMIT(5), // 超過個人領取限制數量
+    - USERNOTEXIST(6), // 找不到這個使用者
+    - CREATEFAILED(7); // 寫入折價券時 DB 異常
+  - CouponUsedRecord
+    - RECEIVE("R"),
+    - USED("U"),
+    - AMEND("B"),//補單
+    - DELETE("D");
+    - CouponPaidRecord
 - 優惠券發送紀錄
 - 優惠券使用紀錄
 - 商家管理
