@@ -7,9 +7,27 @@
 ## Spring
 
 - 核心概念
-  - aop
-  - ioc
+
+  - ## aop: 切面編成
+
+  - 透過 1. **Aspect** 1. **Join Point** 1. **Pointcut**
+    1. 讓核心業務邏輯不會混雜橫切邏輯
+
+    
+
+  - ioc:控制反轉，將建立物件的生命週期 交由 spring 容器管理
+
+    - 好處是降低偶合度
+    - 提高可維護性
+    - 例如我們用@autowired 和 setter 將我們需要的 bean 注入近來
+
   - bean 的生命週期
+  - 定義 bean
+  - 創建 bean 實例
+  - 進行依賴注入
+  - 初始化 postconstruct
+  - destroy
+
 - 一個 resquest 進來執行順序
   - filter
   - interceptor

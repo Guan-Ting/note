@@ -1,6 +1,6 @@
 # 自我介紹
 
-你好 我是 Howard,我有四年後端開發經驗和一年系統分析師經驗,
+你好 我是 Howard
 
 主要為使用 java,有接觸過 struts 2,spring boot 框架
 
