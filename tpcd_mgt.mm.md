@@ -28,6 +28,15 @@
 
 ## 服務管理
 
+- 授權服務
+- 設定熱門服務
+- 設定使用者預設服務
+- 設調服務分類
+- 設定 Webview 服務
+- 設定服務協議
+- 設定服務協議範本
+- 設定服務標籤頁
+
 ## 訊息
 
 - 歷史訊息與訊息排程列表
@@ -108,3 +117,20 @@
 - 用戶最後登入紀錄
 - Onesignal 用戶記錄更新
 - 自動停用過期 SysUser 帳號
+
+# API
+
+- 卡證 API:/tpcard/rest/v3.0.0/cardservice/
+  - 一次只能發給一個使用者
+- 派券 API: /tpcard/rest/v1.1.0/coupon/dispatch
+  - 一次只能發給一個使用者
+- 發送個人訊息 API:/tpcard/rest/v1.1.0/personalmsg
+  - 一次只能發給一個使用者
+- 會員批次建立 API:tpcard/rest/v2.2.0/member
+
+- 取號系統 API(取號系統專案)
+  - /tpeaccount /api /v1.0.3 /booking 預約/取得已存在帳號
+  - /tpeaccount /api /v1.0.3 /cancel 取消預約
+  - /tpeaccount /api /v1.0.3 /confirm 確認預約帳號
+  - /tpeaccount /api /v1.0.3 /register 新增/取得已存在帳號
+  - /tpeaccount /api /v1.0.3 /update 員⼯狀態更新

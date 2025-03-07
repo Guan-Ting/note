@@ -29,6 +29,9 @@
 - 資料結構
   - String
   - Hash
+  - list
+  - set
+  - sorted set
 - 內存淘汰模式
   - redis 基於 內存去做淘汰 key
   - 基於 ttl 時間去做淘汰 key
@@ -52,6 +55,10 @@
     數量，如果差距太多的話，master 會再建立一次 rdb 快照給 slave
 
 # 台北通簡訊 & 推播 onesignal
+
+# 台北通後台單一登入
+
+用台北通 app Oauth 登入帳管系統，帳管系統會用 jwt 送 request 到台北通後台介面，藉由 jwt 裡面的 token 再跟帳管系統交換回 user 帳號和部門資訊，只要全部符合後台登陸的內容 即可 登入
 
 # 南山 saml
 

@@ -23,7 +23,7 @@
 - EXISTS 系列會 對外表 做 LOOP 循環
 - not IN 要小心 若 value 為 NULL 的情況
 - 子查詢若比外表大 建議用 EXISTS
-- 子查詢若比外表小 建議用 IN
+- 子查詢若比外表小 且有索引時用 IN 確實較好，其他可能用 EXISTS 會更好
 
 - 為什麼要索引
 
@@ -52,6 +52,44 @@
 
 - 平行處理
 - 對同一個資源同時進行存取操作
-- 解決方式:加 lock
+- 解決方式
+  - 使用樂觀鎖 用 version 的字串決定要不要更新
+  - 用悲觀鎖
+  - 事務隔離級別 I 的概念
+
+# dead lock 解決方式
+
+- 常見模式:兩個交易各自鎖住資源又要對方的資源導致死結
+
+- 解決方式:
+
+  - 鎖增加超時的設定，時間到了就釋放
+  - 設定兩個交易的訪問順序
+
+- 預防方式:
+  - 縮短交易時間跟範圍
+  - 固定順序訪問資源
+
+# 分頁問題
+
+- 常見 百萬筆以下的話
+  - 可以用 select l.\* From Logging l inner join
+
+(select id FROM Logging
+
+ORDER BY endTime DESC
+
+OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY) as tmp on tmp.id = l.id
+
+- 千萬筆以上的話可以考慮用自增 id 或者是把上一個的 lastupdateTime 當成查詢條件
+  SELECT TOP 10 \*
+  FROM Logging
+  WHERE [endTime] <= getDate()
+  ORDER BY [endTime] DESC;
+
+  SELECT TOP 10 \*
+  FROM Logging
+  WHERE [endTime] <= '2025-03-05 18:21:14.0670000'
+  ORDER BY [endTime] DESC;
 
 深分頁

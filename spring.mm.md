@@ -6,16 +6,32 @@
 
 ## Spring
 
+- OOP 通則
+
+  - DI (依賴注入)
+
+    - 描述:把外面的物件用建構子或 setter 放進來
+      - 降低耦合度，更容易替換
+      - 提供可測試性
+      - 增加可重複性
+
+  - IOC (Inversed of control) 控制反轉
+
+    - 描述:將物件的生命週期交由容器管理
+    - 好處:由容器處理依賴關係 和生命週期
+    - 提高可維護性 統一的配置管理
+
+  - IOC (控制反轉)
+
 - 核心概念
 
   - ## aop: 切面編成
 
   - 透過 1. **Aspect** 1. **Join Point** 1. **Pointcut**
+
     1. 讓核心業務邏輯不會混雜橫切邏輯
 
-    
-
-  - ioc:控制反轉，將建立物件的生命週期 交由 spring 容器管理
+  - ## ioc:控制反轉，將建立物件的生命週期 交由 spring 容器管理
 
     - 好處是降低偶合度
     - 提高可維護性
@@ -57,6 +73,14 @@
 
   - SQL Injection: 輸入欄位中插入惡意的 SQL 語句，進而 SELECT 或 DELETE 資料
     解決方式:用 PREPARE STATEMENT 佔位符 或 ORM
+
+  - 健康點流程:
+    - 先定義 securityConfig > 定義哪些 url 要被 authenticate 2.將
+    - 定義 CORSFilter 繼承 GenericFilterBean 這邊用注入 CorsFilter 也可以 更建議這樣實現
+    - 定義 Token filter 繼承 OncePerRequestFilter 並將 token 解析去認證 並將 authentication 結果放到 secuirty context 完成認證
+    - FilterSecuirtyInterceptor 通常為最後一關，很特別不是 Filter 是 intercepter，後續接 dispatcherServlet
+
+AuthenticationManager provider 的配置裡 -
 
 # 考題
 
