@@ -21,6 +21,21 @@
     - 好處:由容器處理依賴關係 和生命週期
     - 提高可維護性 統一的配置管理
 
+#
+
+## DI (Dependency Injection)
+
+- **Description:** Put objects from outside into your class using constructors or setters
+  - Makes code less connected, easier to replace parts
+  - Makes testing easier
+  - Helps reuse code
+
+## IOC (Inversion of Control)
+
+- **Description:** Let a container manage object lifetimes
+- **Benefits:** Container handles dependencies and life cycles
+- Better maintenance and unified setup management
+
   - IOC (控制反轉)
 
 - 核心概念

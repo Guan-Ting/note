@@ -53,8 +53,8 @@
 - 平行處理
 - 對同一個資源同時進行存取操作
 - 解決方式
-  - 使用樂觀鎖 用 version 的字串決定要不要更新
-  - 用悲觀鎖
+  - 使用樂觀鎖 Optimistic 用 version 的字串決定要不要更新
+  - 用悲觀鎖 Pessimistic
   - 事務隔離級別 I 的概念
 
 # dead lock 解決方式
@@ -63,8 +63,9 @@
 
 - 解決方式:
 
-  - 鎖增加超時的設定，時間到了就釋放
-  - 設定兩個交易的訪問順序
+  - 鎖增加超時的設定，時間到了就釋放 Add timeout settings to the lock
+
+  - 設定兩個交易的訪問順序 set the order for the transaction
 
 - 預防方式:
   - 縮短交易時間跟範圍
