@@ -125,3 +125,13 @@ AuthenticationManager provider 的配置裡 -
 - filter
 - interceptor
 - aop
+
+## tcp/ip 七層協議
+
+- 7 應用層 - HTTP FTP DNS(例如 NSLOOKUP) TELNET
+- 6 展示層 -
+- 5 對話層 - SSL/TLS 在這邊
+- 4 傳輸層 - TCP / UDP
+- 3 網路層 - PING ICMP
+- 2 資料連結層 - ARP 是可以透過 IP 得到 mac address
+- 1 物理層

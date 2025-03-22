@@ -26,6 +26,14 @@ I'm passionate about delivering efficient and scalable solutions, and I'm eager 
 
 ## 問題
 
+## 為什麼會選擇當 SA
+
+At that time, the SA (Systems Analyst) in my team quit, so the company asked if I would accept this challenge.
+
+In my career, I want to learn more about system architecture
+After chating with
+I want to gain experience as a systems analyst.
+
 ## SA 跟 當 developer 的差異是甚麼
 
 我認為 devloper 時 就是專注於 code 本身，用甚麼技術 用甚麼套件 來實現這個功能

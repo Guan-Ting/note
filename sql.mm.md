@@ -1,5 +1,11 @@
 # SQL
 
+## count 使用
+
+- count(\*):會計算到 null
+- count(1):會計算到 null
+- count(主鍵):計算不為 null 的數量
+
 ## 優化查詢
 
 - 關聯列上建立索引
@@ -94,3 +100,12 @@ OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY) as tmp on tmp.id = l.id
   ORDER BY [endTime] DESC;
 
 深分頁
+
+# 主鍵
+
+- auto increment
+- uuid v4 (無序)
+- uuid v7 (有序)
+  - 避免 Y2K38 問題 - 因為他使用 48 位元紀錄時間戳記
+  - 應對分布式或時區問題 - 因為是使用- UTC 時間作時間戳記所以沒問題
+    -
