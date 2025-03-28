@@ -1,9 +1,3 @@
-# Java
-
-## java 8
-
-- localDateTime API
-
 ## java concurrent
 
 - thread vs process
