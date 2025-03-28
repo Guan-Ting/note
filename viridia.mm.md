@@ -23,6 +23,7 @@ SQL N+1 問題
 
 git flow
 
+- server的差異 知道嗎
 ## tomcat
 
 - 1. Easy Deployment

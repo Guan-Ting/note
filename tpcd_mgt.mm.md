@@ -112,11 +112,22 @@
 
 # 批次排程
 
-- 戶役政每月更新紀錄
-- 用戶主題綁定
-- 用戶最後登入紀錄
-- Onesignal 用戶記錄更新
-- 自動停用過期 SysUser 帳號
+- 用戶主題綁定 job5905 0 _/3 _ \* \* ?
+- 會員推播分組 fcm-topic-job 0 0 _/2 _ \* ?
+
+- 停管推播資料匯入 DB message-job 0 0/10 \* \* \* ?
+- 用戶最後登入紀錄 UserLastAccessJob 0 0 3 \* \* ?
+- 批次刪除 NAS 資料 nsa-clear-job 0 0 0 ? \* MON
+
+- 用戶主題解除綁定 job8306 0 _/3 _ \* \* ?
+- Onesignal 用戶記錄更新 TagUpdateJob 0 0/3 \* \* \* ?
+
+- 戶役政每月更新紀錄 HouseHoldQueryExportJob 0 30 0 1 \* ?
+- 自動停用過期系統帳號 SysUserFreezeJob 0 0 1 \* \* ?
+
+- OneSignalGetCSVURLJob OneSignal 取得下載 URL 0 0 _/3 _ \* ?
+- OneSignalDownloadCSVListJob OneSignal 下載使用者名單 0 10 _/3 _ \* ?
+- OneSignalDeleteEmptyUserJob OneSignal 刪除空頭帳號 0 30 _/3 _ \* ?
 
 # API
 
