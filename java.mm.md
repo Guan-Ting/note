@@ -17,3 +17,11 @@
     - latency
     - throughput
     - 我們可以永遠考慮併行嗎? 答案是 no ，mutithread 固定會付出一些成本，最好做 single & mutithread 比較圖
+
+- ## Thread pooling:
+
+- ## CH6.併發挑戰與解決方案
+  - synchronized
+    - 對象鎖而非方法鎖：Java 同步機制鎖定的是對象，而非方法。
+    - 不同方法，相同鎖：對同一個對象的不同同步方法使用的是同一個鎖。
+    - 性能考量：雖然同步能保證線程安全，但也可能導致線程等待，降低程序性能。
